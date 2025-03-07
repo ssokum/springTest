@@ -295,4 +295,39 @@ public class T0306Controller {
 		return "/0306/test12";
 	}
 	
+	@RequestMapping(value = "/test13", method = RequestMethod.GET)
+	public String test13Get() {
+		return "/0306/test13";
+	}
+	@RequestMapping(value = "/test13", method = RequestMethod.POST)
+	public String test13Post(TestVo vo, Model model) {
+		String flag = vo.getSabun().substring(0, 1).toLowerCase();
+		if(!flag.equals("i") && !flag.equals("c") && !flag.equals("s")) {
+			model.addAttribute("message", "정회원이 아니시군요. . . ");
+		} 
+		else {
+			model.addAttribute("vo", vo);
+			model.addAttribute("message", "정회원님 반갑습니다.");
+		}
+		
+		return "/0306/test13";
+	}
+	
+	@RequestMapping(value = "/test14", method = RequestMethod.GET)
+	public String test14Get() {
+		return "/0306/test14";
+	}
+	@RequestMapping(value = "/test14", method = RequestMethod.POST)
+	public String test14Post(TestVo vo, Model model) {
+		String flag = vo.getSabun().substring(0, 1).toLowerCase();
+		String msgFlag="";
+		if(!flag.equals("i") && !flag.equals("c") && !flag.equals("s")) {
+			msgFlag = "memberNo";
+		} 
+		else {
+			msgFlag = "memberOk";
+		}
+		
+		return "redirect:/message/" + msgFlag;
+	}
 }

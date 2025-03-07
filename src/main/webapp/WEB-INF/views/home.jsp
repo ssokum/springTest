@@ -45,11 +45,27 @@
 				class="btn btn-outline-warning btn-sm">test11.jsp</a>
 			<a href="<%=request.getContextPath()%>/0306/test12"
 				class="btn btn-outline-danger btn-sm">test12.jsp</a>
+			<a href="<%=request.getContextPath()%>/0306/test13"
+				class="btn btn-success btn-sm">test13.jsp</a>
+			<a href="<%=request.getContextPath()%>/0306/test14"
+				class="btn btn-primary btn-sm">test14.jsp</a>
 		</div>
 		<hr>
 		<h2>0307폴더</h2>
 		<div>
 			<a href="${ctp}/0307/test1" class="btn btn-success btn-sm">test1.jsp</a>
+		</div>
+		<hr>
+		<div>
+			<a href="${ctp}/LogTest" class="btn btn-primary">로그 연습</a>
+		</div>
+		<hr>
+		<div>
+			<a href="${ctp}/aop/aopMenu" class="btn btn-info">AOP 연습</a>
+		</div>
+		<hr>
+		<div>
+			<a href="${ctp}/0307/xmlMenu" class="btn btn-danger">XML 연습</a>
 		</div>
 	</div>
 </body>
